@@ -23,6 +23,26 @@ body {
   display: flex;
   align-items: center;
 }
+#mastHeadContainer button {
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+#mastHeadContainer button img {
+  width: 100%;
+}
+#mastHeadContainer .logoContainer {
+  width: 150px;
+}
+#mastHeadContainer .logoContainer img {
+  height: 109px;
+  margin-left: 8px;
+}
+
 #sideNavContainer {
   width: 240px;
   padding-top: 56px;
@@ -36,6 +56,9 @@ body {
 #mainSectionContainer {
   display: flex;
   padding-top: 56px;
+}
+#mainSectionContainer.leftPadding {
+  padding-left: 240px;
 }
 #mainContentContainer {
   padding: 10px 30px;
