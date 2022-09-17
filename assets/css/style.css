@@ -4,6 +4,9 @@ body {
   width: 100%;
   margin: 0;
 }
+a:hover {
+  text-decoration: none;
+}
 #pageContainer {
   height: 100%;
   width: 100%;
@@ -23,7 +26,8 @@ body {
   display: flex;
   align-items: center;
 }
-#mastHeadContainer button {
+#mastHeadContainer button:not(.searchButton),
+#mastHeadContainer .rightIcons img {
   height: 40px;
   width: 40px;
   box-sizing: border-box;
@@ -32,6 +36,9 @@ body {
   border: none;
   background-color: transparent;
 }
+#mastHeadContainer .rightIcons {
+  height: 100%;
+}
 #mastHeadContainer button img {
   width: 100%;
 }
@@ -39,7 +46,7 @@ body {
   width: 150px;
 }
 #mastHeadContainer .logoContainer img {
-  height: 109px;
+  height: 45px;
   margin-left: 8px;
 }
 
@@ -62,4 +69,51 @@ body {
 }
 #mainContentContainer {
   padding: 10px 30px;
+  display: flex;
+  flex: 1;
+}
+
+#mastHeadContainer .searchBarContainer {
+  margin: 0 40px;
+  flex: 1;
+  display: flex;
+}
+#mastHeadContainer .searchBarContainer form {
+  flex: 1;
+  display: flex;
+}
+#mastHeadContainer .searchBarContainer .searchBar {
+  flex: 1;
+  max-width: 600px;
+  color: #111;
+  font-size: 14px;
+  font-weight: 100;
+  padding: 2px 6px;
+  border: 1px solid #ccc;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-right: none;
+  height: 32px;
+  box-shadow: #eee 0px 1px 2px 0px inset;
+}
+#mastHeadContainer .searchBarContainer .searchButton {
+  background-color: #f8f8f8;
+  border: 1px solid #d3d3d3;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  cursor: pointer;
+  width: 65px;
+  height: 32px;
+}
+#mastHeadContainer .searchBarContainer .searchButton img {
+  width: 20px;
+  height: 20px;
+}
+
+.column {
+  flex: 1;
+  background-color: white;
+  min-height: 300px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
 }
