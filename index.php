@@ -2,4 +2,14 @@
 
 hello
 
-<?php require_once "includes/footer.php";?>
+<?php
+
+//test
+$query = $con->prepare("SELECT * from categories");
+$query->execute();
+while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+    echo $row["name"] . "<br>";
+}
+//
+
+require_once "includes/footer.php";?>
