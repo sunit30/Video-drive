@@ -33,10 +33,10 @@
             </div>
             <div class="rightIcons">
                 <a href="upload.php">
-                    <img class="upload" src="assets/images/icons/upload.png" alt="upload">
+                    <img class="upload" src="assets/images/icons/upload.png" title="upload" alt="upload">
                 </a>
                 <a href="#">
-                    <img class="profilePicture" src="assets/images/profilePictures/default.png" alt="profilePicture">
+                    <img class="profilePicture" src="assets/images/profilePictures/default.png" title="profile" alt="profilePicture">
                 </a>
             </div>
         </div>

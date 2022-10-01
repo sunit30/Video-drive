@@ -117,3 +117,9 @@ a:hover {
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 2px 0;
 }
+form[action="processing.php"] .form-group {
+  margin-top: 14px;
+}
+form[action="processing.php"] button {
+  margin-top: 20px;
+}
