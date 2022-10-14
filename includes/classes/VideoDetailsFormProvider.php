@@ -5,7 +5,7 @@ class VideoDetailsFormProvider
 
     public function __construct($dbCon)
     {
-        $this->$con = $dbCon;
+        $this->con = $dbCon;
     }
     public function createUploadForm()
     {
@@ -16,7 +16,7 @@ class VideoDetailsFormProvider
         $catagoriesInput = $this->createCatagoriesInput();
         $uploadButton = $this->createUploadButton();
         return "
-        <form action='processing.php' method='POST'>
+        <form action='processing.php' method='POST' enctype='multipart/form-data'>
         $fileInput
         $titleInput
         $descriptionInput
@@ -57,7 +57,7 @@ class VideoDetailsFormProvider
     }
     private function createCatagoriesInput()
     {
-        $query = $this->$con->prepare("SELECT * from categories");
+        $query = $this->con->prepare("SELECT * from categories");
         $query->execute();
 
         $html = "<div class='form-group'>
