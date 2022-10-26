@@ -1,5 +1,6 @@
 <?php
 ob_start(); // waits until all code is loaded
+session_start();
 
 date_default_timezone_set("Europe/London");
 

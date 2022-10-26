@@ -1,6 +1,12 @@
 <?php require_once "includes/header.php";?>
 
-hello
+<?php
+if (isset($_SESSION["userLoggedIn"])) {
+    echo "User logged in as " . $_SESSION["userLoggedIn"];
+} else {
+    echo "hello";
+}
+?>
 
 <?php
 
