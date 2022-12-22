@@ -2,7 +2,7 @@
 
 <?php
 if (isset($_SESSION["userLoggedIn"])) {
-    //echo "User logged in as " . $userLoggedInObj->getName();
+    // echo "User logged in as " . $userLoggedInObj->getName();
     header('Location: watch.php');
 } else {
     //echo "hello";
