@@ -29,25 +29,25 @@ class VideoProcessor
         // Deployment tmp folder and write permission for videos folder
         // maybe set root path for index.php     define ('SITE_ROOT', realpath(dirname(__FILE__)));
         if (move_uploaded_file($videoData["tmp_name"], $tempFilePath)) {
-            $finalFilePath = $targetDir . uniqid() . ".mp4";
+            $finalFilePath = $tempFilePath;
             if (!$this->insertVideoData($videoUploadData, $finalFilePath)) {
                 echo "Insert query failed";
                 return false;
             }
-            if (!$this->convertVideoToMp4($tempFilePath, $finalFilePath)) {
-                echo "Video conversion failed.";
-                return false;
-            }
+            // if (!$this->convertVideoToMp4($tempFilePath, $finalFilePath)) {
+            //     echo "Video conversion failed.";
+            //     return false;
+            // }
 
-            if (!$this->deleteFile($tempFilePath)) {
-                echo "Video deletion failed.";
-                return false;
-            }
+            // if (!$this->deleteFile($tempFilePath)) {
+            //     echo "Video deletion failed.";
+            //     return false;
+            // }
 
-            if (!$this->generateThumbnails($finalFilePath)) {
-                echo "Thumbnail generation failed.";
-                return false;
-            }
+            // if (!$this->generateThumbnails($finalFilePath)) {
+            //     echo "Thumbnail generation failed.";
+            //     return false;
+            // }
             return true;
         }
     }

@@ -1,4 +1,10 @@
-<?php require_once "includes/config.php";?>
+<?php require_once "includes/config.php";
+require_once "includes/classes/User.php";
+require_once "includes/classes/Video.php";
+
+$userLoggedIn = isset($_SESSION["userLoggedIn"]) ? $_SESSION["userLoggedIn"] : "";
+$userLoggedInObj = new User($con, $userLoggedIn);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,26 +23,27 @@
 <body>
     <div id="pageContainer">
         <div id="mastHeadContainer">
-            <button class="navShowHide">
+            <!-- <button class="navShowHide">
                 <img src="assets/images/icons/menu.png" alt="menu">
-            </button>
+            </button> -->
             <a href="index.php" class="logoContainer">
                 <img src="assets/images/icons/playTubeLogo.jpg" title="logo" alt="siteLogo">
             </a>
-            <div class="searchBarContainer">
+            <!-- <div class="searchBarContainer">
                 <form action="search.php" method="GET">
                     <input type="text" class="searchBar" name="term" placeholder="Search...">
                     <button class="searchButton">
                         <img src="assets/images/icons/search.png" alt="search">
                     </button>
                 </form>
-            </div>
+            </div> -->
             <div class="rightIcons">
-                <a href="upload.php">
+                <!-- <a href="upload.php">
                     <img class="upload" src="assets/images/icons/upload.png" title="upload" alt="upload">
-                </a>
-                <a href="#">
-                    <img class="profilePicture" src="assets/images/profilePictures/default.png" title="profile" alt="profilePicture">
+                </a> -->
+                <a href="signOut.php" class="log-out">
+                    <!-- <img class="profilePicture" src="assets/images/profilePictures/default.png" title="profile" alt="profilePicture"> -->
+                Log out
                 </a>
             </div>
         </div>

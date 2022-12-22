@@ -3,6 +3,7 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
+  color: #212529;
 }
 a:hover {
   text-decoration: none;
@@ -24,6 +25,7 @@ a:hover {
   border-bottom: 1px solid #e8e8e8;
   z-index: 1;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 #mastHeadContainer button:not(.searchButton),
@@ -62,15 +64,16 @@ a:hover {
 }
 #mainSectionContainer {
   display: flex;
-  padding-top: 56px;
+  justify-content: center;
+  padding-top: 100px;
 }
 #mainSectionContainer.leftPadding {
   padding-left: 240px;
 }
 #mainContentContainer {
   padding: 10px 30px;
-  display: flex;
-  flex: 1;
+  /* display: flex;
+  flex: 1; */
 }
 
 #mastHeadContainer .searchBarContainer {
@@ -190,4 +193,62 @@ form[action="processing.php"] button {
   font-size: 14px;
   font-weight: 400;
   text-align: center;
+}
+
+.upload {
+  width: 35px;
+  margin: 15px;
+}
+
+.watchLeftColumn {
+  width: 80%;
+  margin: auto;
+}
+.watchLeftColumn .videoPlayer {
+  width: 100%;
+}
+
+.videoInfo {
+  width: 100%;
+  padding: 20px 0 8px 0;
+}
+.videoInfo h1 {
+  display: block;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.videoInfo .bottomSection {
+  display: flex;
+}
+.videoInfo .bottomSection .viewCount {
+  color: rgba(17, 17, 17, 0.6);
+  font-size: 16px;
+  flex: 1;
+}
+.videoInfo .bottomSection .controls {
+  flex: 1;
+  text-align: right;
+}
+
+.videoInfo .bottomSection .controls button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: rgba(17, 17, 17, 0.4);
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.videoInfo .bottomSection .controls button img {
+  height: 20px;
+  width: 20px;
+  margin: 4px 8px 8px 8px;
+}
+.log-out {
+  text-decoration: none;
+  font-weight: 600;
+  color: #8b0000;
 }

@@ -1,6 +1,11 @@
 <?php
 require_once "includes/header.php";
 require_once "includes/classes/VideoDetailsFormProvider.php";
+
+if (!isset($_SESSION["userLoggedIn"])) {
+    echo "User not logged in";
+    exit();
+}
 ?>
 
 <div class="column">
